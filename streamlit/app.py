@@ -26,4 +26,4 @@ input_data=np.array([[age,sex,bmi,children,smoker,region_northwest,region_southe
 if st.button('Predict Charges'):
     log_prediction=model.predict(input_data)[0]
     charges=np.expm1(log_prediction)
-    st.success(f'Estimated Charges:{charges:.2f}')
+    st.success(f'Estimated Charges:${charges:.2f} per year')
